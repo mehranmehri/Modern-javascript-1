@@ -1,24 +1,37 @@
-//this is a comment
-/*
-  multi line comments
-*/
+let val;
 
-console.log("hello world");
-console.log(123);
-console.log(true);
-var greeting = "hello";
-console.log(greeting);
-console.log([1, 2, 3, 4]);
-console.log({ a: 1, b: 2, c: 3 });
-console.table({ a: 2, b: 3 });
-console.error("This is an error");
-console.clear();
-console.warn("This is a warning");
+val = document;
+val = document.all;
+val = document.all[0];
+val = document.all[1];
+val = document.all.length;
+val = document.head;
+val = document.doctype;
+val = document.domain;
+val = document.contentType;
 
-console.time("Hello");
-console.log(123);
-console.log(123);
-console.log(123);
-console.log(123);
-console.log(123);
-console.timeEnd("Hello");
+//not recommended
+val = document.forms;
+val = document.forms[0];
+val = document.forms[0].id;
+val = document.forms[0].method;
+
+val = document.links;
+val = document.links[0];
+val = document.links[0].id;
+val = document.links[0].className;
+val = document.links[0].classList[0];
+
+val = document.images;
+
+val = document.scripts;
+val = document.scripts[2].getAttribute("src");
+
+let scripts = document.scripts;
+let scriptsArray = Array.from(scripts);
+
+scriptsArray.forEach(function(script) {
+  console.log(script.getAttribute("src"));
+});
+
+console.log(val);
