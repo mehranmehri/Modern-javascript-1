@@ -39,7 +39,7 @@ guessBtn.addEventListener("click", function() {
   // Validate
   if (isNaN(guess) || guess < min || guess > max) {
     setMessage(`Please enter a number between ${min} and ${max}`, "red");
-    console.log("nan entered");
+    return false;
   }
 
   //Check if won
